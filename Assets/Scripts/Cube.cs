@@ -5,14 +5,16 @@ using UnityEngine;
 //heritage
 public class Cube : Formes
 {
-    
+    //private string color;
     private string nomCube = "cube";
 
+   
     //encapsulation
-    public string Nom { get => nomCube; private set => nomCube = value; }   
+    public string Nom { get => nomCube; set => nomCube = value; }   
 
     public override void DisplayText()
     {
-        Debug.Log("je suis un " + Nom);
+        displayText.text = "je suis un " + Nom + " de couleur " + couleur.color;
+        //Debug.Log(displayText);
     }
 }
